@@ -1,6 +1,6 @@
 <template>
-  <main class="articleComp wow animate__fadeInUp" @click="goArticlePage(item.id)" v-for="(item, index) in articleList"
-    :key="index">
+  <main class="articleComp wow animate__fadeInUp" @click="goArticlePage(item.id, item.title, item.time)"
+    v-for="(item, index) in articleList" :key="index">
     <div class="content">
       <p class="time">发布时间:{{ item.time }}</p>
       <h2 class="title">{{ item.title }}</h2>
@@ -33,9 +33,9 @@ onMounted(() => {
 const articleList = reactive<articlePreObj[]>([])  // 这种需要自定义类型
 articleList.push(...articlePreList)
 
-const goArticlePage = (id: number) => {
+const goArticlePage = (id: number, title: string, time: string) => {
   // query 和 paramas 传参都是存放再对象中去
-  router.push({ name: 'ArticlePage', query: { id } })
+  router.push({ name: 'ArticlePage', query: { id, title, time } })
 }
 
 

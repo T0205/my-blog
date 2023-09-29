@@ -43,6 +43,14 @@ app.directive('highlight', (el: any) => {
   });
 })
 
+
+
+app.directive('red', {
+  mounted(el) {
+    el.style.color = 'red';
+  },
+});
+
 app.use(createPinia())
 app.use(router)
 

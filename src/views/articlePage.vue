@@ -2,13 +2,23 @@
   <div class="articlePage">
 
     <div class="top-img">
-      <img src="../assets//home-img.jpg" alt="">
+      <img src="../assets/home-img.jpg" alt="">
+    </div>
+    <div class="article-desc">
+      <div class="desc-c">
+        <div class="title">{{ route.query.title }}</div>
+        <div class="tag">
+          <div class="time">{{ route.query.time }}</div>
+
+        </div>
+
+      </div>
+
     </div>
     <!-- 占位div -->
     <!-- 因为 背景图使用了定位，定到了header下面，正常的文档流被改变，就需要占位把正常的文档流顶下来 -->
     <div class="placeholder"></div>
     <div class="content">
-      文章详情页{{ route.query.id }}
 
       <ArticleOneComp></ArticleOneComp>
 
@@ -36,19 +46,40 @@ onMounted(() => { })
 .articlePage {
   position: relative;
   width: 100vw;
-  height: 100vh;
 
   .top-img {
     position: absolute;
     top: -100px;
     width: 100%;
     height: 300px;
-    // background-color: pink;
     overflow: hidden;
     z-index: -9999;
 
     img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .article-desc {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+
+    .desc-c {
+      width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+
+      .title {
+        font-size: 28px;
+        color: white;
+        margin-bottom: 15px;
+      }
+
+
+
     }
   }
 
