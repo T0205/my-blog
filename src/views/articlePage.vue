@@ -19,9 +19,14 @@
     <!-- 因为 背景图使用了定位，定到了header下面，正常的文档流被改变，就需要占位把正常的文档流顶下来 -->
     <div class="placeholder"></div>
     <div class="content">
-
-      <ArticleOneComp></ArticleOneComp>
-
+      <div class="content-c">
+        <div class="dashed">
+          <div class="svg">
+            <img src="../assets/img/article-little-icon.svg" alt="">
+          </div> &nbsp;文章
+        </div>
+        <ArticleOneComp></ArticleOneComp>
+      </div>
     </div>
 
   </div>
@@ -45,7 +50,7 @@ onMounted(() => { })
 // vh 和 vw 是相对于当前窗口的比值
 .articlePage {
   position: relative;
-  width: 100vw;
+  width: 100%;
 
   .top-img {
     position: absolute;
@@ -77,9 +82,6 @@ onMounted(() => { })
         color: white;
         margin-bottom: 15px;
       }
-
-
-
     }
   }
 
@@ -88,7 +90,32 @@ onMounted(() => { })
   }
 
   .content {
-    // border: 1px solid black;
+    width: 100%;
+
+    .content-c {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .dashed {
+      border-bottom: 1px dashed #313030;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      display: flex;
+      text-align: center;
+      line-height: 1.2;
+
+      .svg {
+        width: 20px;
+        height: 25px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+
   }
 
 }

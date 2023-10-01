@@ -15,7 +15,9 @@
     <!-- 主题标语 -->
     <div class="theme-words">
       <div class="poem">{{ themeWords }}</div>
-      <div class="anima">显示打字区域</div>
+      <!-- 键入动画 -->
+      <KeyAnimation></KeyAnimation>
+      <!-- <div class="anima">显示打字区域</div> -->
     </div>
 
     <!-- 波浪线 -->
@@ -78,13 +80,15 @@
 
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue';
+import KeyAnimation from '@/components/KeyAnimation.vue';
 import BackgroundImgCom from '@/components/BackgroundImgCom.vue';
 import threeDBox from '@/components/3d-box/threeDBox.vue';
 import ArticlePreviewComp from '@/components/ArticlePreviewComp.vue';
 import InformComp from '@/components/InformComp.vue';
 
-let themeWords = ref('習は無限に進歩します')
 
+
+let themeWords = ref('每日一言')
 
 
 
@@ -277,9 +281,9 @@ onMounted(() => {
 }
 
 .theme-words .poem {
-  font-size: 37px;
+  font-size: 40px;
   /* 字体间距 */
-  letter-spacing: 0.18em;
+  letter-spacing: 0.13em;
   color: #fff;
   font-weight: 600;
   margin-bottom: 20px;

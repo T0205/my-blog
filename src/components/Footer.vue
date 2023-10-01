@@ -23,7 +23,7 @@ onMounted(() => { })
   .content {
     background-color: pink;
     text-align: center;
-    padding: 10px 0;
+    padding: 6px 0;
     border-radius: 30px 30px 0 0;
     // 第一个参数是 渐变色的方向: 100deg 和 to right 一样
     // background-image: linear-gradient(to right, #3498db, #27ae60, #9b59b6, #3498db, #f39c12, #d35400);
@@ -33,7 +33,7 @@ onMounted(() => { })
     animation: bganimation 7s infinite;
 
     .title {
-      font-size: 18px;
+      font-size: 16px;
       color: var(--main--bgcColor);
       padding-bottom: 10px;
     }
