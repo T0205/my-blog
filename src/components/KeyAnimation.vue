@@ -54,10 +54,7 @@ onMounted(() => {
       cursorSpeed: 800,
       cursorColor: 'color',
       waitUntilVisible: true, // 等到出现在视口里面再打印
-      callback: function () {
-        console.log(111);
-      }
-    }).go();
+    }).go()
   }
 
   getAWord()

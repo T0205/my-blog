@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import mouseAnimate from '@/utils/mouseAnimation';
+mouseAnimate()
 </script>
 
 <template>
@@ -10,4 +12,4 @@ import { RouterLink, RouterView } from 'vue-router'
 body {
   font-family: 'Heavy';
 }
-</style>
+</style>  

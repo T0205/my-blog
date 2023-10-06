@@ -1,5 +1,4 @@
 
-
 import 'animate.css'
 import '@/assets/font/font.css'
 
@@ -21,6 +20,9 @@ import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
 
 
+// 引入懒加载组件
+import lazyPlugin from 'vue3-lazy'
+
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -32,6 +34,13 @@ const app = createApp(App)
 
 // 使用hljs插件
 app.use(hljsVuePlugin)
+
+// 使用懒加载组件:  img标签前使用 v-lazy 代替 :src
+app.use(lazyPlugin, {
+  loading: new URL('./assets/img/loading.png', import.meta.url).href, // 图片加载时默认图片
+  error: new URL('./assets/img/error-loading.png', import.meta.url).href// 图片加载失败时默认图片
+})
+
 
 /**
  * 自定义指令:全局高亮代码
