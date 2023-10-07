@@ -20,7 +20,7 @@
             <nav class="nav-card" v-for="(item, index) in navList" :key="index">
               <a :href="item.link" target="_blank">
                 <div class="img">
-                  <img :src="item.img" alt="">
+                  <img v-lazy="item.img" alt="">
                 </div>
                 <div class="desc">
                   <p class="title">{{ item.title }}</p>
@@ -38,7 +38,7 @@
             <nav class="nav-card" v-for="(item, index) in UINavList" :key="index">
               <a :href="item.link" target="_blank">
                 <div class="img">
-                  <img :src="item.img" alt="">
+                  <img v-lazy="item.img" alt="">
                 </div>
                 <div class="desc">
                   <p class="title">{{ item.title }}</p>
@@ -56,7 +56,7 @@
             <nav class="nav-card" v-for="(item, index) in toolList" :key="index">
               <a :href="item.link" target="_blank">
                 <div class="img">
-                  <img :src="item.img" alt="">
+                  <img v-lazy="item.img" alt="">
                 </div>
                 <div class="desc">
                   <p class="title">{{ item.title }}</p>
@@ -73,7 +73,7 @@
             <nav class="nav-card" v-for="(item, index) in coderList" :key="index">
               <a :href="item.link" target="_blank">
                 <div class="img">
-                  <img :src="item.img" alt="">
+                  <img v-lazy="item.img" alt="">
                 </div>
                 <div class="desc">
                   <p class="title">{{ item.title }}</p>
