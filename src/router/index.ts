@@ -28,7 +28,7 @@ const routes = [
       {
         path: '/articlePage',
         name: 'ArticlePage',
-        component: () => import('@/views/articlePage.vue'),
+        component: () => import('@/views/ArticlePage.vue'),
         meta: {
           title: '文章详情',
           headerBgColor: "transparent",

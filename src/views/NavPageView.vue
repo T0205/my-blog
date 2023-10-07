@@ -202,6 +202,7 @@ a {
               margin-right: 10px;
               margin-top: 10px;
               transition: all 0.6s ease;
+              overflow: hidden;
 
               img {
                 width: 100%;

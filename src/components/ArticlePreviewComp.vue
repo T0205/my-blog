@@ -1,6 +1,12 @@
 <template>
   <main class="articleComp wow animate__fadeInUp" @click="goArticlePage(item.id, item.title, item.time)"
     v-for="(item, index) in articleList" :key="index">
+
+    <!-- 实现了左右交叉排列 -->
+    <div v-show="index % 2 === 0 ? false : true" class="img">
+      <img v-lazy="item.imgSrc" alt="">
+    </div>
+
     <div class="content">
       <p class="time">发布时间:{{ item.time }}</p>
       <h2 class="title">{{ item.title }}</h2>
@@ -9,8 +15,10 @@
         <span class="tag-item" v-for="(tagItem, index) in item.tagList" :key="index">{{ tagItem }}</span>
       </div>
     </div>
-    <div class="img">
-      <img :src="item.imgSrc" alt="">
+
+    <div v-show="index % 2 === 0 ? true : false" class="img">
+      <!-- <img :src="item.imgSrc" alt=""> -->
+      <img v-lazy="item.imgSrc" alt="">
     </div>
   </main>
 </template>
@@ -37,8 +45,6 @@ const goArticlePage = (id: number, title: string, time: string) => {
   // query 和 paramas 传参都是存放再对象中去
   router.push({ name: 'ArticlePage', query: { id, title, time } })
 }
-
-
 </script>
  
 <style lang='scss' scoped>
@@ -90,6 +96,7 @@ const goArticlePage = (id: number, title: string, time: string) => {
       .tag-item {
         display: inline-block;
         width: 70px;
+        text-align: center;
       }
 
     }
@@ -100,13 +107,19 @@ const goArticlePage = (id: number, title: string, time: string) => {
     width: 50%;
     height: 100%;
     background-color: pink;
+    overflow: hidden;
 
     img {
       width: 100%;
       height: auto;
+      transition: all 0.8s;
     }
 
+    img:hover {
+      transform: scale(1.2);
+    }
   }
+
 
 }
 

@@ -127,7 +127,6 @@ onMounted(() => {
 
     .main-c {
       width: 1280px;
-      height: 1000px;
       margin: 0 auto; // 子元素设置的居中
       // background-color: pink;
       overflow: hidden;

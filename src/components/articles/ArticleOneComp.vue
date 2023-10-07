@@ -36,6 +36,7 @@
         </li>
       </ul>
       <div>
+        <h3>实例代码</h3>
         <highlightjs language='javascript' code="    var anon_fun = function(){
       document.write(&#39;hello&lt;br&gt;&#39;)
       }
@@ -53,7 +54,7 @@
 
     console.log(anon_fun())   // undefined 没有返回值的函数默认返回undefined
     console.log(list_1())     // undefined
-"></highlightjs>
+    " />
       </div>
 
     </div>
@@ -61,10 +62,11 @@
 </template>
 
 <script setup lang="ts">
-import { articleOne } from '@/data/articleList'
+// import { articleOne } from '@/data/articleList'
 import { onMounted, ref } from 'vue';
 
 const content = ref()
+
 
 onMounted(() => {
   // content.value.innerHTML = articleOne.content
@@ -79,191 +81,7 @@ onMounted(() => {
 
 </script>
 
+
 <style lang='scss' scoped>
-#content {
-
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 50px;
-
-  .content-c {
-    width: 800px;
-    margin: 0 auto;
-    // background-color: pink;
-    position: relative;
-
-    /* markdown样式 */
-
-    blockquote {
-      margin: 0;
-      padding: 15px 50px;
-      position: relative;
-      word-break: break-word;
-      text-align: center;
-    }
-
-    blockquote:before {
-      content: "\f10d";
-      font-size: 1.5rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: orange;
-      font-family: FontAwesome;
-    }
-
-    blockquote:after {
-      content: '\f10e';
-      font-size: 1.5rem;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      color: orange;
-      font-family: FontAwesome;
-    }
-
-    code:not(.hljs) {
-      background: #fefac7;
-      color: #e67474;
-      word-break: break-word;
-      padding: 4px 6px;
-      border-radius: 5px;
-    }
-
-    ul {
-      list-style: disc;
-      padding: 0 10px 0 35px;
-      color: var(--articleGreyFontColor);
-      border-radius: 10px;
-    }
-
-    ol {
-      list-style: decimal;
-      padding: 0 10px 0 35px;
-      color: var(--articleGreyFontColor);
-      border-radius: 10px;
-    }
-
-    ol li,
-    ul li {
-      padding: 8px 0;
-      Letter-spacing: 1px;
-      line-height: 24px;
-    }
-
-    h3 {
-      padding-bottom: 8px;
-      border-bottom: 1px dashed #ddd;
-    }
-
-    h1,
-    h2,
-    h2,
-    h3,
-    h4 {
-      margin-top: 30px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      padding-left: 40px;
-    }
-
-    h3 {
-      padding-left: 20px;
-      font-size: 22px;
-    }
-
-    h4 {
-      padding-left: 20px;
-      font-size: 20px;
-    }
-
-    h5 {
-      font-size: 18px;
-      padding-left: 28px;
-    }
-
-    h2:before {
-      content: "🌺";
-      position: absolute;
-      left: 0;
-      font-size: 1.03em;
-      margin-top: -2px;
-    }
-
-    h3:before {
-      content: "#";
-      left: 0;
-      position: absolute;
-      margin-top: 2px;
-      color: #ff6d6d;
-    }
-
-    h4:before {
-      content: "▌";
-      left: 0;
-      position: absolute;
-      color: #ff6d6d;
-    }
-
-    h5:before {
-      content: "🌷";
-      left: 0;
-      position: absolute;
-    }
-
-    a {
-      color: #e67474;
-      position: relative;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: orange;
-    }
-
-    a:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 1.5px;
-      bottom: -2px;
-      left: 0;
-      background-color: orange;
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-    }
-
-    a:hover:after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-
-    p {
-      color: var(--articleFontColor);
-      line-height: 35px;
-      word-break: break-word;
-      font-size: 18px;
-    }
-
-    hr {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      border: 0.5px dashed #fc625d;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 5px;
-    }
-
-
-  }
-
-
-
-
-}
+@import url(../../css/markdown.css);
 </style>
