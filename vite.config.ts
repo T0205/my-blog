@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './', // 加这句基础路径即可
   plugins: [
     vue(),
   ],
