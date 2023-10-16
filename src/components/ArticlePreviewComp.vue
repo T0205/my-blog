@@ -106,7 +106,6 @@ const goArticlePage = (id: number, title: string, time: string) => {
     float: left;
     width: 50%;
     height: 100%;
-    background-color: pink;
     overflow: hidden;
 
     img {

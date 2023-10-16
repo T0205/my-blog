@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 
-let footerTitle = ref<string>('天生我材必有用')
+let footerTitle = ref<string>('终身学习,无限进步')
 
 onMounted(() => { })
 

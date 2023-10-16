@@ -11,17 +11,9 @@ export const articlePreList: articlePreObj[] = [
     imgSrc: 'https://pic.imgdb.cn/item/65202bf6c458853aefe44c41.jpg',
     link: ''
   },
+
   {
     id: 2,
-    time: '2023-9-23',
-    title: 'Uni使用腾讯SDK',
-    simpleDesc: '在小程序开发过程中经常使用到的获取定位功能,获取用户当前位置.',
-    tagList: ['前端', 'uniapp', '地图SDK'],
-    imgSrc: 'src/assets/img/avatar.png',
-    link: ''
-  },
-  {
-    id: 3,
     time: '2023-9-28',
     title: 'Nginx简要介绍',
     simpleDesc: '一个 http服务器,同时具备优秀的高性能的并发处理能力以及反向代理、负载均衡.',
@@ -30,12 +22,21 @@ export const articlePreList: articlePreObj[] = [
     link: ''
   },
   {
-    id: 1,
+    id: 3,
     time: '2023-10-2',
     title: 'SendBeacon',
     simpleDesc: 'navigator.sendBeacon ：实现可靠的数据上报.它可以在页面卸载时安全、可靠地发送数据。',
     tagList: ['网络请求', 'API', '请求优化'],
     imgSrc: 'https://pic.imgdb.cn/item/65202b3ec458853aefe43868.png',
+    link: ''
+  },
+  {
+    id: 1,
+    time: '2023-9-23',
+    title: '测试演示文章',
+    simpleDesc: '在小程序开发过程中经常使用到的获取定位功能,获取用户当前位置.',
+    tagList: ['前端', 'uniapp', '地图SDK'],
+    imgSrc: 'src/assets/img/avatar.png',
     link: ''
   },
 

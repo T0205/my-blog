@@ -3,7 +3,11 @@
     <!-- 使用伪元素 设置 喇叭 -->
     <i class="bell fa fa-bell-o" aria-hidden="true"></i>
     <p class="info-content">
-      gitee地址：https://www.bilibili.com/video/BV1eM41167Ks/?share_source=copy_web&vd_source=9738e48d8c99433fae3902e2364fbe66
+      项目源码: https://gitee.com/tang-0205/website-new <br>
+      上线地址: www.tang0205.top <br>
+      演示地址: https://tang-0205.gitee.io/website-new (速度快)
+
+    <p class="inform-desc">个人租赁的阿里云ECS访问较慢,建议使用演示地址进行访问</p>
     </p>
 
   </main>
@@ -41,6 +45,12 @@ onMounted(() => { })
     font-size: 16px;
     margin-left: 20px;
     line-height: 1.5; // 行高 也是 行间距， 不带单位就是当前字体大小的倍数
+
+    .inform-desc {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #989595;
+    }
   }
 }
 

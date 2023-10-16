@@ -28,7 +28,7 @@
     </div>
     <!-- 3D盒子 看板盒子 -->
     <div class="threeD-box">
-      <threeDBox></threeDBox>
+      <!-- <threeDBox></threeDBox> -->
     </div>
     <!-- 版心区域 -->
     <main class="main">
