@@ -2,7 +2,7 @@
   <div class="footer">
     <main class="content">
       <div class="title">{{ footerTitle }}</div>
-      <div class="desc">2023 未备案</div>
+      <div class="desc">豫ICP备2023024977</div>
     </main>
   </div>
 </template>
