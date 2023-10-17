@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { onMounted, reactive } from 'vue';
 
-let navList = reactive(['首页', 'my love', '百宝箱', '树洞', '关于'])
+let navList = reactive(['首页', 'my love', '百宝箱', '树洞', '关于作者'])
 let navIcon = reactive(['🏡', '💋', '🧰 ', '💬', '🐟'])
 let navAddress = reactive(['/', '#', '/navigation', '#', '#',])
 
