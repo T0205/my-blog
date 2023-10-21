@@ -1,4 +1,8 @@
 <template>
+  <!-- <div class="Loading" v-if="isLoading">
+    <LoadingComp></LoadingComp>
+  </div> -->
+
   <div id="layoutView">
 
     <!-- 返回顶部的组件 -->
@@ -24,8 +28,13 @@
 import ToTop from '@/components/ToTop.vue';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
+// import LoadingComp from '@/components/LoadingComp.vue';
 import { computed, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+
+
+
+let isLoading = ref<boolean>(true)
 
 let isShowHeader = ref(true)
 let oldScrollTop = ref(0)
@@ -73,10 +82,19 @@ const showHeader = () => {
   }
 }
 
+
+
 onMounted(() => {
   window.addEventListener('scroll', showHeader)
   scrollHeight.value = document.documentElement.scrollHeight
   clientHeight.value = document.documentElement.clientHeight
+
+  setTimeout(() => {
+    isLoading.value = false
+  }, 2000)
+
+  console.log('layout onMounted');
+  
 })
 
 

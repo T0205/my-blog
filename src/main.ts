@@ -41,7 +41,6 @@ app.use(lazyPlugin, {
   error: new URL('./assets/img/error-loading.png', import.meta.url).href// 图片加载失败时默认图片
 })
 
-
 /**
  * 自定义指令:全局高亮代码
  */
@@ -54,13 +53,12 @@ app.directive('highlight', (el: any) => {
 
 
 
-app.directive('red', {
-  mounted(el) {
-    el.style.color = 'red';
-  },
-});
+// app.directive('red', {
+//   mounted(el) {
+//     el.style.color = 'red';
+//   },
+// });
 
 app.use(createPinia())
 app.use(router)
-
 app.mount('#app')
