@@ -27,9 +27,11 @@ function request(method: string, url: string, params?: any) {
     params,
   });
 }
+
+// https://api.muvip.cn/doc/bing
 async function getRandomImg() {
   let method = "GET";
-  let url = "http://api.muvip.cn/api/bing?rand=true&info=true";
+  let url = "http://api.muvip.cn/api/bing/?rand=true&info=true";
   const res = await request(method, url);
   randomImg.value = res.data.url;
   // console.log("res.data.result[0].url===>" + res.data.result);
