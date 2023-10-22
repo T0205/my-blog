@@ -29,11 +29,12 @@ function request(method: string, url: string, params?: any) {
 }
 async function getRandomImg() {
   let method = "GET";
-  let url = "https://api.oioweb.cn/api/bing";
+  let url = "http://api.muvip.cn/api/bing?rand=true&info=true";
   const res = await request(method, url);
-  console.log("res.data.result[0].url===>" + res.data.result);
-  Math.random();
-  randomImg.value = res.data.result[randomInt(0, 7)].url;
+  randomImg.value = res.data.url;
+  // console.log("res.data.result[0].url===>" + res.data.result);
+  // Math.random();
+  // randomImg.value = res.data.result[randomInt(0, 7)].url;
 }
 
 onMounted(() => {
