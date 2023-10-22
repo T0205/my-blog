@@ -2,18 +2,15 @@
   <div class="articlePage">
     <div class="wow animate__fadeInDown">
       <div class="top-img">
-        <img src="../assets/home-img.jpg" alt="">
+        <img src="../assets/home-img.jpg" alt="" />
       </div>
       <div class="article-desc">
         <div class="desc-c">
           <div class="title">{{ route.query.title }}</div>
           <div class="tag">
             <div class="time">{{ route.query.time }}</div>
-
           </div>
-
         </div>
-
       </div>
       <!-- 占位div -->
       <!-- 因为 背景图使用了定位，定到了header下面，正常的文档流被改变，就需要占位把正常的文档流顶下来 -->
@@ -24,8 +21,9 @@
       <div class="content-c">
         <div class="dashed">
           <div class="svg">
-            <img src="../assets/img/article-little-icon.svg" alt="">
-          </div> &nbsp;文章
+            <img src="../assets/img/article-little-icon.svg" alt="" />
+          </div>
+          &nbsp;文章
         </div>
 
         <!-- 此处使用动态组件进行控制 -->
@@ -34,54 +32,52 @@
         <!-- <ArticleTwoComp></ArticleTwoComp> -->
         <!-- <ArticleThreeComp></ArticleThreeComp> -->
         <!-- <ArticleFourComp></ArticleFourComp> -->
-
       </div>
     </div>
-
   </div>
 </template>
 
 <script setup lang="ts">
 // 加载组件
-import ArticleOneComp from '@/components/articles/ArticleOneComp.vue'
-import ArticleTwoComp from '@/components/articles/ArticleTwoComp.vue'
-import ArticleThreeComp from '@/components/articles/ArticleThreeComp.vue'
-import ArticleFourComp from '@/components/articles/ArticleFourComp.vue'
-import WOW from 'wow.js'
+import ArticleOneComp from "@/components/articles/ArticleOneComp.vue";
+import ArticleTwoComp from "@/components/articles/ArticleTwoComp.vue";
+import ArticleThreeComp from "@/components/articles/ArticleThreeComp.vue";
+import ArticleFourComp from "@/components/articles/ArticleFourComp.vue";
+import WOW from "wow.js";
 
-import { onMounted, shallowRef, ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-const route = useRoute()
-const router = useRouter()
+import { onMounted, shallowRef, ref } from "vue";
+import { useRoute, useRouter } from "vue-router";
+const route = useRoute();
+const router = useRouter();
 
-const currentComp = shallowRef<any>(ArticleOneComp)
-let articleId = ref<number>()
-articleId.value = Number(route.query.id)
+const currentComp = shallowRef<any>(ArticleOneComp);
+let articleId = ref<number>();
+articleId.value = Number(route.query.id);
 // 根据点击不同的文章, 传过来不同的id, 进而判断加载哪一个组件
 switch (articleId.value) {
   case 1:
-    currentComp.value = ArticleOneComp
+    currentComp.value = ArticleOneComp;
     // currentComp.value = () => import('@/components/articles/ArticleOneComp.vue')
     // import('@/components/articles/ArticleOneComp.vue').then(comp => {
     //   currentComp.value = comp;
     // });
     break;
   case 2:
-    currentComp.value = ArticleTwoComp
+    currentComp.value = ArticleTwoComp;
     // currentComp.value = () => import('@/components/articles/ArticleTwoComp.vue')
     // import('@/components/articles/ArticleTwoComp.vue').then(comp => {
     //   currentComp.value = comp;
     // });
     break;
   case 3:
-    currentComp.value = ArticleThreeComp
+    currentComp.value = ArticleThreeComp;
     // currentComp.value = () => import('@/components/articles/ArticleThreeComp.vue')
     // import('@/components/articles/ArticleThreeComp.vue').then(comp => {
     //   currentComp.value = comp;
     // });
     break;
   case 4:
-    currentComp.value = ArticleFourComp
+    currentComp.value = ArticleFourComp;
     // currentComp.value = () => import('@/components/articles/ArticleFourComp.vue')
     // import('@/components/articles/ArticleFourComp.vue').then(comp => {
     //   currentComp.value = comp;
@@ -89,22 +85,17 @@ switch (articleId.value) {
     break;
 }
 
-
-console.log('route.query.id===>', route.query.id)
-
-
+console.log("route.query.id===>", route.query.id);
 
 onMounted(() => {
   new WOW({
-    boxClass: 'wow',
-    animateClass: 'animate__animated',
-
-  }).init()
-})
-
+    boxClass: "wow",
+    animateClass: "animate__animated",
+  }).init();
+});
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 // % 相对于父元素的大小
 // vh 和 vw 是相对于当前窗口的比值
 .articlePage {
@@ -173,9 +164,6 @@ onMounted(() => {
         }
       }
     }
-
-
   }
-
 }
 </style>

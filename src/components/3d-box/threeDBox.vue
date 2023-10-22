@@ -1,29 +1,27 @@
 <template>
   <div class="thrssd-box">
     <section>
-      <div><img src="@/components/3d-box/imgs/1.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/2.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/3.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/4.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/5.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/6.jpg" alt=""></div>
+      <div><img src="@/components/3d-box/imgs/1.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/2.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/3.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/4.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/5.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/6.jpg" alt="" /></div>
 
-      <div><img src="@/components/3d-box/imgs/1.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/2.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/3.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/4.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/5.jpg" alt=""></div>
-      <div><img src="@/components/3d-box/imgs/6.jpg" alt=""></div>
+      <div><img src="@/components/3d-box/imgs/1.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/2.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/3.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/4.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/5.jpg" alt="" /></div>
+      <div><img src="@/components/3d-box/imgs/6.jpg" alt="" /></div>
     </section>
-
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted } from "vue";
 
-onMounted(() => { })
-
+onMounted(() => {});
 </script>
 
 <style scoped>
@@ -75,7 +73,6 @@ section div img {
 
 /* 移动图片是控制div的移动 */
 
-
 /* 向外移动全都是 Z轴的一定, 元素都转换了方向, 所以都移动200px 移动的方向也不同. */
 section div:nth-child(1) {
   /* 向前一定 75px */
@@ -126,7 +123,6 @@ section div:nth-child(6) {
 section:hover div:nth-child(6) {
   transform: rotateY(-90deg) translateZ(200px);
 }
-
 
 /* 重叠的部分  不用加 hover效果 */
 section div:nth-child(7) {

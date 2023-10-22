@@ -1,5 +1,4 @@
 #content {
-
   width: 100%;
   overflow: hidden;
   margin-bottom: 50px;
@@ -31,7 +30,7 @@
     }
 
     blockquote:after {
-      content: '\f10e';
+      content: "\f10e";
       font-size: 1.5rem;
       position: absolute;
       bottom: 0;
@@ -65,7 +64,7 @@
     ol li,
     ul li {
       padding: 8px 0;
-      Letter-spacing: 1px;
+      letter-spacing: 1px;
       line-height: 24px;
     }
 
@@ -142,7 +141,7 @@
     }
 
     a:after {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       transform: scaleX(0);
@@ -176,11 +175,5 @@
       max-width: 100%;
       border-radius: 5px;
     }
-
-
   }
-
-
-
-
 }

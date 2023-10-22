@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from "vue";
 import TypeIt from "typeit";
 // 导入一言
 // import { temp } from '@/data/aword'
@@ -24,11 +24,8 @@ function request(method: string, url: string, params?: any) {
   });
 }
 
-
-
 onMounted(() => {
-
-  console.log('onMounted');
+  console.log("onMounted");
 
   async function getAWord() {
     let method = "GET";
@@ -36,8 +33,8 @@ onMounted(() => {
     const res = await request(method, url);
     // 存放进 pinia： 但是pinia再页面加载完成之后才会执行， 排在页面的
     // aWordStore.aWord = res.data.text
-    localStorage.setItem('aWord', res.data.text)
-    console.log(localStorage.getItem('aWord'));
+    localStorage.setItem("aWord", res.data.text);
+    console.log(localStorage.getItem("aWord"));
 
     /**
      * 由于 请求总是慢于vue生命周期函数的执行， 而我们又需要在 onMounted 执行前获取数据
@@ -45,27 +42,24 @@ onMounted(() => {
      */
 
     new TypeIt("#element", {
-      // 提示的错误可以不管, 类型提示罢了,可以执行  
-      strings: localStorage.getItem('aWord'),
+      // 提示的错误可以不管, 类型提示罢了,可以执行
+      strings: localStorage.getItem("aWord"),
       speed: 100,
       deleteSpeed: 100,
       startDelay: 1800,
       // loop: true,
       cursorSpeed: 800,
-      cursorColor: 'color',
+      cursorColor: "color",
       waitUntilVisible: true, // 等到出现在视口里面再打印
-    }).go()
+    }).go();
   }
 
-  getAWord()
-
-})
-
+  getAWord();
+});
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .KeyAnimationPage {
-
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;

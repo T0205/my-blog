@@ -1,26 +1,24 @@
 <template>
   <div class="navPageView">
-
     <!-- <div class="font-type">测试字体</div> -->
 
     <!-- 定义版心 -->
     <div class="navPageView-c">
       <section class="video wow animate__fadeInDown">
         <div class="img">
-          <img src="../assets//img//nav-top-img.jpg" alt="">
+          <img src="../assets//img//nav-top-img.jpg" alt="" />
         </div>
       </section>
 
-      <main class="nav-content  wow animate__fadeInUp">
-
+      <main class="nav-content wow animate__fadeInUp">
         <section class="nav-box">
-          <div class="title" style="letter-spacing: 2px;">前端</div>
+          <div class="title" style="letter-spacing: 2px">前端</div>
           <div class="nav-content">
             <!-- 下面循环 -->
             <nav class="nav-card" v-for="(item, index) in navList" :key="index">
               <a :href="item.link" target="_blank">
                 <div class="img">
-                  <img v-lazy="item.img" alt="">
+                  <img v-lazy="item.img" alt="" />
                 </div>
                 <div class="desc">
                   <p class="title">{{ item.title }}</p>
@@ -31,14 +29,17 @@
           </div>
         </section>
 
-
         <section class="nav-box">
-          <div class="title" style="letter-spacing: 2px;">UI组件库</div>
+          <div class="title" style="letter-spacing: 2px">UI组件库</div>
           <div class="nav-content">
-            <nav class="nav-card" v-for="(item, index) in UINavList" :key="index">
+            <nav
+              class="nav-card"
+              v-for="(item, index) in UINavList"
+              :key="index"
+            >
               <a :href="item.link" target="_blank">
                 <div class="img">
-                  <img v-lazy="item.img" alt="">
+                  <img v-lazy="item.img" alt="" />
                 </div>
                 <div class="desc">
                   <p class="title">{{ item.title }}</p>
@@ -50,13 +51,17 @@
         </section>
 
         <section class="nav-box">
-          <div class="title" style="letter-spacing: 2px;">工具箱</div>
+          <div class="title" style="letter-spacing: 2px">工具箱</div>
           <div class="nav-content">
             <!-- 下面循环 -->
-            <nav class="nav-card" v-for="(item, index) in toolList" :key="index">
+            <nav
+              class="nav-card"
+              v-for="(item, index) in toolList"
+              :key="index"
+            >
               <a :href="item.link" target="_blank">
                 <div class="img">
-                  <img v-lazy="item.img" alt="">
+                  <img v-lazy="item.img" alt="" />
                 </div>
                 <div class="desc">
                   <p class="title">{{ item.title }}</p>
@@ -68,12 +73,16 @@
         </section>
 
         <section class="nav-box">
-          <div class="title" style="letter-spacing: 2px;">程序员必备</div>
+          <div class="title" style="letter-spacing: 2px">程序员必备</div>
           <div class="nav-content">
-            <nav class="nav-card" v-for="(item, index) in coderList" :key="index">
+            <nav
+              class="nav-card"
+              v-for="(item, index) in coderList"
+              :key="index"
+            >
               <a :href="item.link" target="_blank">
                 <div class="img">
-                  <img v-lazy="item.img" alt="">
+                  <img v-lazy="item.img" alt="" />
                 </div>
                 <div class="desc">
                   <p class="title">{{ item.title }}</p>
@@ -85,42 +94,31 @@
         </section>
       </main>
       <div class="margin"></div>
-
     </div>
-
-
-
-
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive } from 'vue';
-import { navList, UINavList, toolList, coderList } from '../data/navList'  // ts 文件默认不需要 .ts 后缀,  可以省略后缀:include
-import WOW from 'wow.js'
+import { onMounted, reactive } from "vue";
+import { navList, UINavList, toolList, coderList } from "../data/navList"; // ts 文件默认不需要 .ts 后缀,  可以省略后缀:include
+import WOW from "wow.js";
 onMounted(() => {
   new WOW({
-    boxClass: 'wow',
-    animateClass: 'animate__animated',
+    boxClass: "wow",
+    animateClass: "animate__animated",
+  }).init();
+});
 
-  }).init()
-})
+console.log("navList===>", navList);
 
-console.log('navList===>', navList);
+let navInfo = reactive<NavObj[]>([]);
 
-let navInfo = reactive<NavObj[]>([])
+navInfo.push(...navList);
 
-navInfo.push(...navList)
-
-console.log('navInfo==>', navInfo);
-
-
-
-
+console.log("navInfo==>", navInfo);
 </script>
 
-
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .wow {
   animation-duration: 0.8s;
   /* 设置动画持续时间为 2 秒 */
@@ -168,7 +166,6 @@ a {
     }
 
     .nav-content {
-
       .nav-box {
         margin-top: 25px;
 
@@ -192,7 +189,7 @@ a {
             padding: 0 6px;
             border-radius: 10px;
             transition: all 0.6s ease;
-            box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, .15);
+            box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.15);
             cursor: pointer;
 
             .img {
@@ -230,7 +227,7 @@ a {
               }
 
               .desc-content {
-                opacity: .7;
+                opacity: 0.7;
                 font-weight: 700;
                 letter-spacing: 1px;
                 font-size: 13px;
@@ -241,8 +238,6 @@ a {
                 overflow: hidden;
               }
             }
-
-
           }
 
           .nav-card:hover {
@@ -267,17 +262,10 @@ a {
         }
       }
     }
-
-
-
   }
 
   .margin {
     height: 30px;
   }
-
-
-
-
 }
 </style>

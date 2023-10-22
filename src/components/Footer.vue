@@ -8,15 +8,14 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from "vue";
 
-let footerTitle = ref<string>('终身学习,无限进步')
+let footerTitle = ref<string>("终身学习,无限进步");
 
-onMounted(() => { })
-
+onMounted(() => {});
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .footer {
   background-color: #fff;
 
@@ -27,7 +26,15 @@ onMounted(() => { })
     border-radius: 30px 30px 0 0;
     // 第一个参数是 渐变色的方向: 100deg 和 to right 一样
     // background-image: linear-gradient(to right, #3498db, #27ae60, #9b59b6, #3498db, #f39c12, #d35400);
-    background-image: linear-gradient(100deg, #f39c12, #f1c40f, #e74c3c, #16a085, #27ae60, #2980b9);
+    background-image: linear-gradient(
+      100deg,
+      #f39c12,
+      #f1c40f,
+      #e74c3c,
+      #16a085,
+      #27ae60,
+      #2980b9
+    );
     background-size: 200%;
     // 添加动画: 最后一个参数循环
     animation: bganimation 7s infinite;
@@ -38,7 +45,8 @@ onMounted(() => { })
       padding-bottom: 10px;
     }
 
-    .desc {}
+    .desc {
+    }
   }
 
   // 要想使用循环 infinite， 头尾的需要一至， 也就是0%的参数 和100%的参数需要一至

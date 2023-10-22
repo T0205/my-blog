@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 .img {
   display: flex;
   justify-content: center;
@@ -58,7 +57,7 @@
 }
 
 #content .content-c blockquote:after {
-  content: '\f10e';
+  content: "\f10e";
   font-size: 0.7rem;
   position: absolute;
   bottom: 4px;
@@ -93,7 +92,7 @@
 #content .content-c ol li,
 #content .content-c ul li {
   padding: 1px 0;
-  Letter-spacing: 1px;
+  letter-spacing: 1px;
   line-height: 24px;
 }
 
@@ -170,7 +169,7 @@
 }
 
 #content .content-c a:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);

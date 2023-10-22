@@ -1,11 +1,10 @@
 <template>
   <!-- 主页 : 没有头部和底部 -->
   <div id="WebHomeView">
-
     <!-- 切换夜间模式的按钮 -->
     <div class="night-switch">
       <!-- 使用的是单选按钮模拟 -->
-      <input type="checkbox" id="night-switch">
+      <input type="checkbox" id="night-switch" />
       <label class="switch" for="night-switch"><span></span></label>
     </div>
 
@@ -24,7 +23,10 @@
     <div class="sea-side">
       <div class="wave"></div>
       <div class="wave"></div>
-      <i class="fa fa-angle-down arrow-down" @click="toNextPage('.content')"></i>
+      <i
+        class="fa fa-angle-down arrow-down"
+        @click="toNextPage('.content')"
+      ></i>
     </div>
     <!-- 3D盒子 看板盒子 -->
     <div class="threeD-box">
@@ -37,7 +39,7 @@
         <aside class="aside">
           <div class="my-info">
             <div class="avater">
-              <img src="../assets/img/avatar.png" alt="">
+              <img src="../assets/img/avatar.png" alt="" />
             </div>
             <p class="username">唐0205</p>
             <div class="data-panel">
@@ -66,51 +68,42 @@
           <InformComp></InformComp>
           <div class="dashed">
             <div class="svg">
-              <img src="../assets/img/article-little-icon.svg" alt="">
-            </div> &nbsp;文章
+              <img src="../assets/img/article-little-icon.svg" alt="" />
+            </div>
+            &nbsp;文章
           </div>
           <ArticlePreviewComp></ArticlePreviewComp>
         </div>
-
       </div>
     </main>
-
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue';
-import KeyAnimation from '@/components/KeyAnimation.vue';
-import BackgroundImgCom from '@/components/BackgroundImgCom.vue';
-import threeDBox from '@/components/3d-box/threeDBox.vue';
-import ArticlePreviewComp from '@/components/ArticlePreviewComp.vue';
-import InformComp from '@/components/InformComp.vue';
+import { onMounted, reactive, ref } from "vue";
+import KeyAnimation from "@/components/KeyAnimation.vue";
+import BackgroundImgCom from "@/components/BackgroundImgCom.vue";
+import threeDBox from "@/components/3d-box/threeDBox.vue";
+import ArticlePreviewComp from "@/components/ArticlePreviewComp.vue";
+import InformComp from "@/components/InformComp.vue";
 
-
-
-let themeWords = ref('每日一言')
-
-
+let themeWords = ref("每日一言");
 
 // 思路: 获取一个标签距离顶部的高度, 点击时将页面的卷入高度修改为这个数值即可
 const toNextPage = (elClassName: any) => {
   // 获取界面需要卷入的高度
-  let scollTop = document.querySelector(elClassName).offsetTop
+  let scollTop = document.querySelector(elClassName).offsetTop;
   window.scroll({
-    top: scollTop + 80,  // 稍微加点 要不然不够隐藏波浪线
-    behavior: 'smooth'
-  })
-}
+    top: scollTop + 80, // 稍微加点 要不然不够隐藏波浪线
+    behavior: "smooth",
+  });
+};
 
-onMounted(() => {
-
-
-})
-
+onMounted(() => {});
 </script>
 
 <!-- 主页导航按钮的样式 -->
-<style scoped src="@/css/main-nav.css" ></style>
+<style scoped src="@/css/main-nav.css"></style>
 <style scoped src="@/css/night-switch.css"></style>
 <style scoped src="@/css/seaside-wave.css"></style>
 
@@ -142,14 +135,21 @@ onMounted(() => {
           flex-direction: column;
           width: 270px;
           height: 340px;
-          background: linear-gradient(-45deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea);
+          background: linear-gradient(
+            -45deg,
+            #e8d8b9,
+            #eccec5,
+            #a3e9eb,
+            #bdbdf0,
+            #eec1ea
+          );
           background-size: 400%;
           animation: userLabel 10s ease infinite;
           padding: 20px;
           border-radius: 25px;
           box-sizing: border-box;
           box-shadow: 0 1px 20px -6px rgba(0, 0, 0, 0.5);
-          transition: all .3s ease;
+          transition: all 0.3s ease;
 
           .avater {
             width: 120px;
@@ -208,7 +208,8 @@ onMounted(() => {
           box-shadow: 0 5px 10px 5px rgba(110, 110, 110, 0.4);
         }
 
-        .article-list {}
+        // .article-list {
+        // }
       }
 
       .content {
@@ -232,10 +233,7 @@ onMounted(() => {
             }
           }
         }
-
       }
-
-
     }
   }
 
@@ -245,18 +243,13 @@ onMounted(() => {
     }
 
     50% {
-
       background-position: 100% 0%;
     }
 
     100% {
       background-position: 0 50%;
-
     }
   }
-
-
-
 }
 
 /* 开关大小位置的调整 */
