@@ -32,8 +32,10 @@ function request(method: string, url: string, params?: any) {
 async function getRandomImg() {
   let method = "GET";
   let url = "https://api.muvip.cn/api/bing/?rand=true&info=true";
-  const res = await request(method, url);
-  randomImg.value = res.data.url;
+  randomImg.value = 'https://dailybing.com/images/Bing/Images/zh-cn/OHR.MehrangarhJodhpur_ZH-CN2855490711_UHD.jpg?w=1920&h=1080&sign=c338c02fd874ab1d40d9d83c30cb02fb'
+/*   const res = await request(method, url);
+  randomImg.value = res.data.url; */
+  
   // console.log("res.data.result[0].url===>" + res.data.result);
   // Math.random();
   // randomImg.value = res.data.result[randomInt(0, 7)].url;
@@ -49,7 +51,7 @@ onMounted(() => {
 .home-image {
   position: fixed;
   left: 0;
-  top: -150px;
+  top: 0px;
   width: 100%;
   min-width: var(--min--width);
   z-index: -9999;

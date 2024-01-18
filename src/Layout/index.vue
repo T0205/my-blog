@@ -99,10 +99,10 @@ onMounted(() => {
 
 <style scoped lang="scss">
 /* 整体 稍微黑色一点 rgba(0, 0, 0, 0.15)  */
-#layoutView {
+// #layoutView {
   // background-color: var(--header--bgColor);
   // height: 1800px;
-}
+// }
 
 /* hender 被固定定位了, 脱离了文档流, 需要界面内容的top65px 去占位置 */
 #paddingTop {
