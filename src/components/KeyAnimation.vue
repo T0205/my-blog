@@ -28,9 +28,14 @@ onMounted(() => {
   console.log("onMounted");
 
   async function getAWord() {
-    let method = "GET";
-    let url = "https://api.wrdan.com/hitokoto";
-    const res = await request(method, url);
+    /* 
+      let method = "GET";
+      let url = "https://api.wrdan.com/hitokoto";
+      const res = await request(method, url);
+    */
+    
+    const res:{data:{text:string}} = {data:{text:'为了去码头整点薯条吃。'}}
+
     // 存放进 pinia： 但是pinia再页面加载完成之后才会执行， 排在页面的
     // aWordStore.aWord = res.data.text
     localStorage.setItem("aWord", res.data.text);
