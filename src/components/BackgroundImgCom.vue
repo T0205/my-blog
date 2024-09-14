@@ -3,7 +3,7 @@
     <!-- 背景大图 封装成组件  -->
     <div class="home-image">
       <!-- <img class="home-bgi" v-lazy="homeBgcSrc" alt=""> -->
-      <img class="home-bgi" :src="randomImg" alt="" />
+      <img class="home-bgi" src="/public/th.png" alt="" />
       <!-- 为什么此时 v-lazy 就会出现加载错误, 在TS的测试项目中使用 v-lazy 都可以 -->
       <!-- <img class="home-bgi" v-lazy="randomImg" alt=""> -->
     </div>
@@ -32,7 +32,8 @@ function request(method: string, url: string, params?: any) {
 async function getRandomImg() {
   let method = "GET";
   let url = "https://api.muvip.cn/api/bing/?rand=true&info=true";
-  randomImg.value = 'https://dailybing.com/images/Bing/Images/zh-cn/OHR.MehrangarhJodhpur_ZH-CN2855490711_UHD.jpg?w=1920&h=1080&sign=c338c02fd874ab1d40d9d83c30cb02fb'
+  // randomImg.value = 'https://dailybing.com/images/Bing/Images/zh-cn/OHR.MehrangarhJodhpur_ZH-CN2855490711_UHD.jpg?w=1920&h=1080&sign=c338c02fd874ab1d40d9d83c30cb02fb'
+  randomImg.value = 'https://dailybing.com/thumb/zh-cn/1920/0/OHR.PortMarseille_ZH-CN3194394496_UHD.jpg'
 /*   const res = await request(method, url);
   randomImg.value = res.data.url; */
   

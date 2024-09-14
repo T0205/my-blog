@@ -47,9 +47,6 @@ onMounted(() => {});
       color: var(--main--bgcColor);
       padding-bottom: 10px;
     }
-
-    .desc {
-    }
   }
 
   // 要想使用循环 infinite， 头尾的需要一至， 也就是0%的参数 和100%的参数需要一至
